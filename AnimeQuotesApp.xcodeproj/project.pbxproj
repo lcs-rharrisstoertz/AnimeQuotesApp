@@ -11,6 +11,9 @@
 		25579C02270F26F900E01803 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25579C01270F26F900E01803 /* ContentView.swift */; };
 		25579C04270F271500E01803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25579C03270F271500E01803 /* Assets.xcassets */; };
 		25579C07270F271500E01803 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25579C06270F271500E01803 /* Preview Assets.xcassets */; };
+		25579C10270F278F00E01803 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25579C0F270F278F00E01803 /* APIConstants.swift */; };
+		25579C15270F28CB00E01803 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25579C14270F28CB00E01803 /* Quote.swift */; };
+		25579C1A270F2A3B00E01803 /* QuotesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25579C19270F2A3B00E01803 /* QuotesScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		25579C01270F26F900E01803 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		25579C03270F271500E01803 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25579C06270F271500E01803 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		25579C0F270F278F00E01803 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		25579C14270F28CB00E01803 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		25579C19270F2A3B00E01803 /* QuotesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 		25579BFE270F26F900E01803 /* AnimeQuotesApp */ = {
 			isa = PBXGroup;
 			children = (
+				25579C11270F287800E01803 /* Feature */,
+				25579C0E270F277500E01803 /* Constants */,
 				25579BFF270F26F900E01803 /* AnimeQuotesAppApp.swift */,
 				25579C01270F26F900E01803 /* ContentView.swift */,
 				25579C03270F271500E01803 /* Assets.xcassets */,
@@ -65,6 +73,47 @@
 				25579C06270F271500E01803 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		25579C0E270F277500E01803 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				25579C0F270F278F00E01803 /* APIConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		25579C11270F287800E01803 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				25579C12270F288800E01803 /* Quotes */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		25579C12270F288800E01803 /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				25579C16270F29E900E01803 /* Screen */,
+				25579C13270F289D00E01803 /* Model */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
+		25579C13270F289D00E01803 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25579C14270F28CB00E01803 /* Quote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		25579C16270F29E900E01803 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				25579C19270F2A3B00E01803 /* QuotesScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25579C15270F28CB00E01803 /* Quote.swift in Sources */,
 				25579C02270F26F900E01803 /* ContentView.swift in Sources */,
 				25579C00270F26F900E01803 /* AnimeQuotesAppApp.swift in Sources */,
+				25579C10270F278F00E01803 /* APIConstants.swift in Sources */,
+				25579C1A270F2A3B00E01803 /* QuotesScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +329,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +359,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
