@@ -16,9 +16,19 @@ struct QuotesScreen: View {
     
     var body: some View {
         
-        List {
-            ForEach(vm.quotes, id: \.anime) {item in
-                QuoteView(item: item)
+        Group {
+            
+            if vm.quotes.isEmpty{
+                VStack(spacing: 8) {
+                    ProgressView()
+                    Text("Fetching Quotes")
+                }
+            } else {
+                List {
+                    ForEach(vm.quotes, id: \.anime) {item in
+                        QuoteView(item: item)
+                    }
+                }
             }
         }
         .task {
