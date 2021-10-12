@@ -19,10 +19,7 @@ struct QuotesScreen: View {
         Group {
             
             if vm.quotes.isEmpty{
-                VStack(spacing: 8) {
-                    ProgressView()
-                    Text("Fetching Quotes")
-                }
+                LoadingView(text: "Fetching Quotes")
             } else {
                 List {
                     ForEach(vm.quotes, id: \.anime) {item in
